@@ -9,7 +9,10 @@ if (isset($_GET["q"])){
 }else{
    $LoadPage = "index";
 }
-
+if (isset($_GET["mode"])){
+   //if ()
+   require_once("/"$_GET["mode"]);
+}
 $LawText = @file_get_contents("page/{$LoadPage}.md");
 $Text = Markdown::defaultTransform($LawText);
 
