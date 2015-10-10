@@ -4,13 +4,20 @@ echo <<< EOT
 <html>
 
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="{$KeyWord}">
+    <meta name="description" content="{$Description}">
+    <meta name="keywords" content="{$Keyword}">
+    <meta name="robots" content="{$Robots}">
+    <meta http-equiv="Content-Style-Type" content="{$Styletype}">
+    <meta http-equiv="Content-Script-Type" content="{$Scripttype}">
+    <meta name="author" content="{$Author}">
+    <meta name="generator" content="{$Generator}">
+    
 
     <link rel="stylesheet" type="text/css" media="screen" href="theme/{$Theme}/stylesheets/stylesheet.css">
 
-    <title>{$Title}</title>
+    <title>{$Wikiname}</title>
   </head>
 
   <body>
@@ -18,9 +25,7 @@ echo <<< EOT
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
-
-          <a href="index.php?q=index"><h1 id="project_title">{$Title}</a></h1>
-          <p id="project_tagline">竹輪部の部室 > {$PageTitle}</p>
+          <a href="index.php?q=index"><h1 id="project_title">{$Wikiname} - {$PageTitle}</a></h1>
           <h2 id="project_tagline">{$Message}</h2>
 
         </header>

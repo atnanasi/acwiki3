@@ -1,28 +1,34 @@
 <?php
 //Acwiki3.00 atnanasi
 
-require_once("lib/phpmarkdown/Michelf/Markdown.inc.php");
-use Michelf\Markdown;
+$config = parse_ini_file("config/acwiki.ini",1);
 
 if (isset($_GET["q"])){
-   $LoadPage = $_GET["q"];
+	$LoadPage = $_GET["q"];
 }else{
-   $LoadPage = "index";
+	$LoadPage = "index";
 }
 if (isset($_GET["mode"])){
-   //if ()
-   require_once("/"$_GET["mode"]);
+	//if ()
+	require_once($_GET["mode"]);
 }
-$LawText = @file_get_contents("page/{$LoadPage}.md");
-$Text = Markdown::defaultTransform($LawText);
 
-$Title = @file_get_contents("config/Title.txt");
-$Message = @file_get_contents("config/Message.txt");
-$KeyWord = @file_get_contents("config/KeyWord.txt");
-$Footer = @file_get_contents("config/Footer.txt");
-$Theme = @file_get_contents("config/Theme.txt");
+$LawText = @file_get_contents("{$config["system"]["pagepass"]}/{$LoadPage}.md");
+$Text = $LawText;
+$Wikiname = $config["wiki"]["name"];
+$Message = $config["wiki"]["message"];
+$Footer = $config["wiki"]["footer"];
+$Theme = $config["wiki"]["theme"];
 
-$PageTitle = $LoadPage;
+$Author = $config["meta"]["author"];
+$Description = $config["meta"]["description"];
+$Keyword = $config["meta"]["keyword"];
+$Styletype = $config["meta"]["styletype"];
+$Scripttype = $config["meta"]["scripttype"];
+$Robots = $config["meta"]["robots"];
+$Generator = $config["meta"]["generator"];
+
+$PageTitle = "{$LoadPage}";
 
 include "theme/{$Theme}/theme.php";
 ?>
