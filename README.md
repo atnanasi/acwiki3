@@ -1,24 +1,14 @@
-# Acwiki3
-Acwikiシリーズの最新バージョンです。
-Acwikiとは高機能なCMSシステムで、あなたのサイトの利便性をもっと高めることができます。  
+# Acwiki
+Acwiki is high-performance CMS system.
+Acwiki can do your site more usefully.
 
-## 使用方法
-Acwiki3はPHPを使用していますので、PHPが使用出来る状態のウェブサーバーのドキュメントフォルダに置くだけで動作します。  
-基本的な設定はGUIで行なうことが出来ます。  
-初期状態ではユーザー名が「admin」パスワードが「password」になっています。  
-設定画面を開けたらまず、パスワードを変更してください。  
+Currently version:3.00(beta)
 
-## ライセンスとか
-Acwiki3はMITライセンスを適用しています。  
-ライセンスを許諾できない場合は使用しないでください。  
-
-## その他
-まだ未完成なので使用しない方が良いです。  
-所詮はほぼ素人の手作りなので何があるかわかりません。  
-ただ、今までのバージョンよりは格段マシと思われます。
-
-##著作権表示
-2015 Atnanasi(ys2000pro)
+#Install
 
 
+## LINCENSE
+Acwiki applies MITLicense.
+
+2015 Atnanasi(ys2000pro@gmail.com)
 

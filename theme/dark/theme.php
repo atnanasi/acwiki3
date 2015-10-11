@@ -1,4 +1,5 @@
 <?php
+//Dark theme 1.05
 echo <<< EOT
 <!DOCTYPE html>
 <html>
@@ -27,7 +28,7 @@ echo <<< EOT
         <header class="inner">
           <a href="index.php?q=index"><h1 id="project_title">{$Wikiname} - {$PageTitle}</a></h1>
           <h2 id="project_tagline">{$Message}</h2>
-
+          <
         </header>
     </div>
 
