@@ -1,27 +1,44 @@
 <?php
 //Acwiki3.00 atnanasi
+$root = __DIR__;
+require_once"lib/acwiki/core.php";
 
 $config = parse_ini_file("config/acwiki.ini",1);
 $plugin = parse_ini_file("config/plugin.ini",1);
 
 if (isset($_GET["q"])) {
-	$LoadPage = $_GET["q"];
+	$LoadPage = htmlspecialchars($_GET["q"]);
 }else{
-	$LoadPage = "index";
+	$LoadPage = htmlspecialchars("index");
 }
 if (isset($_GET["mode"]) == 0) {
-	$mode = "view";
+	$Wikimode = htmlspecialchars("view");
+}else{
+	$Wikimode = htmlspecialchars($_GET["mode"]);
 }
 
-$LawText = @file_get_contents("{$config["system"]["pagepass"]}/{$LoadPage}.md");
+//Error check
+
+if (!(file_exists($LoadPage))) {
+	http_response_code(404);
+}
+
+if (strstr($LoadPage,"..")) {
+	error("Can't use ..!");
+	exit;
+}
+
+$RawText = @file_get_contents("{$config["system"]["pagepass"]}/{$LoadPage}.md");
+$RawTopmenu = @file_get_contents("{$config["system"]["pagepass"]}/{$config["wiki"]["topmenu"]}");
+$RawSidebar = @file_get_contents("{$config["system"]["pagepass"]}/{$config["wiki"]["sidebar"]}");
 
 $Wikiname = $config["wiki"]["name"];
 $Message = $config["wiki"]["message"];
-$Topmenu = "";
+$Topmenu = $RawTopmenu;
 $Pagetitle = "{$LoadPage}";
 $Pagedate = "";
-$Pagetext = $LawText;
-$Sidebar = "";
+$Pagetext = $RawText;
+$Sidebar = $RawSidebar;
 $Footer = $config["wiki"]["footer"];
 $Theme = $config["wiki"]["theme"];
 

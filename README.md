@@ -7,7 +7,7 @@ Currently version:3.00(beta)
 #Install
 
 
-## LINCENSE
+## LICENSE
 Acwiki applies MITLicense.
 
 2015 Atnanasi(ys2000pro@gmail.com)

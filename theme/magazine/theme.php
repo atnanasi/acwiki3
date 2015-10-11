@@ -23,8 +23,9 @@ echo <<< EOT
 <div id="wrapper">
 	<div id="branding">
 		<h1><a href="index.php?q=index">{$Wikiname}</a></h1>
+		{$Message}
 		<ul class="topNav">
-		{$Topmenu}
+{$Topmenu}
 		</ul><br class="clear" />
 	</div>
 	<div id="contant">
@@ -44,25 +45,11 @@ echo <<< EOT
 				</ul>
 				<img src="theme/{$Theme}/images/sideBarListBoxBottom.png" alt="" width="240" height="10" />
 			</div>
-		<div class="sideBarItem">
-			<h3>Blogroll</h3>
-			<ul>
-				<li><a href="#">Category One</a></li>
-				<li class="cat002"><a href="#" >There are many</a></li>
-				<li class="cat003"><a href="#">Lorem Ipsum available</a></li>
-				<li class="cat003"><a href="#">If you are going</a></li>
-				<li class="cat003"><a href="#">All the Lorem Ipsum</a></li>
-				<li class="cat003"><a href="#">200 Latin words</a></li>
-				<li class="cat003"><a href="#">It uses a dictionary</a></li>
-				<li class="cat003"><a href="#">Lorem ipsum dolor</a></li>
-				<li class="cat003"><a href="#">Latin professor at</a></li>
-			</ul>
+			<div>
+			</div>
 		</div>
-	<div>
+		<br class="clear" />
 	</div>
-</div>
-<br class="clear" />
-</div>
 </div>
 
 <div id="footerContainer">
