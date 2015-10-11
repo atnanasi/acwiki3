@@ -1,10 +1,9 @@
 <?php
 // Markdown parser
-
+require_once("plugin/{$plugin_name}/Michelf/Markdown.inc.php");
+use Michelf\Markdown;
 if ($mode == "view") {
-	require_once("plugin/{$plugin_name}/Michelf/Markdown.inc.php");
-	use Michelf\Markdown;
-	$Text = Markdown::defaultTransform($LawText);
+	$Pagetext = Markdown::defaultTransform($LawText);
 }
 ?>
 
