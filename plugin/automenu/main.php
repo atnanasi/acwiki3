@@ -2,9 +2,9 @@
 //Auto menu - Auto menu generator
 //Name,Url
 
-if ($Wikimode == "view") {
+if ($Wikimode) {
 	$Topmenu = "";
-	$MenuTemplate = @file_get_contents("theme/{$Theme}/topmenu.php");
+	$MenuTemplate = file_get_contents("theme/{$Theme}/topmenu.php");
 	$MenuKeys = explode(PHP_EOL, $RawTopmenu);
 	foreach($MenuKeys as $MenuKey) {
 		$MenuData = explode(",", $MenuKey);

@@ -6,4 +6,9 @@ Acwiki has 3 CMS type.
 - Wikimode  
 - Blogmode  
 - Homepagemode  
+- hage is hage
 
+- hage is hage
+- hage is hage
+- hage is hage
+- hage is hage
