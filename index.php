@@ -31,7 +31,7 @@ if (!(file_exists("system/{$Wikimode}.php"))) {
 	exit;
 }
 
-if ($Wikimode = "view") {
+if ($Wikimode == "view") {
 	if (strstr($LoadPage,"..")) {
 		http_response_code(404);
 		echo error("404 NotFound",$config["system"]["pagepass"],"It's an unjust URL.");
